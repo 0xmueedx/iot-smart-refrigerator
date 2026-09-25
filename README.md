@@ -19,12 +19,12 @@ A retrofitted water dispenser turned into a smart refrigerator with:
 ## SDLC Documentation
 | Artifact | Link |
 |---|---|
-| Requirements Specification | [SRS](requirements/SRS.md) |
+| Requirements Specification | [SRS](requirements/srs.md) |
 | Design Decisions | [Design](design/decisions.md) |
 | Test Plan & Cases | [Testing](testing/test_plan.md) |
 | Traceability Matrix | [Matrix](testing/traceability_matrix.md) |
 | Bug Reports | [Bugs](testing/bug_reports.md) |
-| Lessons Learned | [Reflection](reflections/lessons_learned.md) |
+| Lessons Learned | [Reflections](reflections/lessons_learned.md) |
 
 ## Healthcare Relevance
 Cold-chain monitoring principles apply directly to vaccine storage, 
