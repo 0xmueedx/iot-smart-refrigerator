@@ -1,9 +1,9 @@
 # Results & Evidence
 
 ## Documents
-- [Results Summary](results_summary.md) — Full quantitative results across all subsystems
+- [Results Summary](summary.md) — Full quantitative results across all subsystems
 
-## Screenshots
+## Proof
 - [OLED Ready Screen](screenshots/oled_ready.png)
 - [Web Dashboard](screenshots/dashboard.png)
 - [Door-Open Warning](screenshots/door_open_warning.png)
