@@ -188,6 +188,7 @@ Entered when valid credentials are found in SPIFFS.
 5. Update lock timer
 6. Update OLED display state machine
 7. Handle buzzer beeps
+```
 
 ## 11. Known Behaviors
 
