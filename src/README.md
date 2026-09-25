@@ -156,6 +156,7 @@ The firmware logs to the serial console at **115200 baud**. Example output:
 [IR]   Door OPEN (timer started)
 [IR]   Door CLOSED (timer reset)
 [ACS712] Current: 0.78 A  Power: 96 VA
+```
 
 ## 10. Firmware Modes
 
