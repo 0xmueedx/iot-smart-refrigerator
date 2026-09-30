@@ -2,20 +2,14 @@
 
 Requirements are numbered FR-001 through FR-014. Each requirement is testable, has an assigned priority, and maps to at least one test case in the traceability matrix.
 
----
-
 ## Priority Definitions
-
 | Priority | Meaning |
 |---|---|
 | **High** | Essential — system does not function without it |
 | **Medium** | Important for usability — system is degraded without it |
 | **Low** | Nice-to-have — improves experience but not critical |
 
----
-
 ## Functional Requirements
-
 | ID | Requirement | Priority |
 |---|---|---|
 | FR-001 | The system shall repurpose the lower compartment of a water dispenser as a refrigerated storage unit using its existing 220V vapor-compression cooling system. | High |
@@ -33,10 +27,7 @@ Requirements are numbered FR-001 through FR-014. Each requirement is testable, h
 | FR-013 | The system shall allow manual unlock via a dashboard button for 3 seconds. | Low |
 | FR-014 | The system shall display the current time via NTP when connected to a network with Internet access. | Low |
 
----
-
 ## Requirement Details
-
 ### FR-001: Cooling System Adaptation
 The lower compartment of a commercial water dispenser, including its hermetic 220V reciprocating compressor, wire-and-tube condenser, capillary tube, and roll-bond evaporator, shall be retained and repurposed as a general-purpose refrigerated locker.
 
@@ -78,5 +69,3 @@ The dashboard shall include an "Unlock" button that triggers a 3-second unlock c
 
 ### FR-014: Time Synchronization
 When connected to a network with Internet access, the system shall synchronize time via NTP and display it in 12-hour format on the OLED.
-
----

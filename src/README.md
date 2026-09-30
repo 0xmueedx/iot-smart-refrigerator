@@ -5,12 +5,8 @@
 **Toolchain:** arduino-cli 1.4.1  
 **Sketch Size:** ~900 lines
 
----
-
 ## 1. Overview
-
 The firmware runs on the ESP32-S3 and handles:
-
 - RFID card reading (MFRC522) and access decision logic
 - DHT22 temperature and humidity sensing
 - IR door-ajar detection with escalating alert
@@ -25,10 +21,7 @@ The firmware runs on the ESP32-S3 and handles:
 Everything is contained in a single `.ino` file for simplicity of 
 deployment and review.
 
----
-
 ## 2. Hardware Requirements
-
 | Component | Model | Purpose |
 |---|---|---|
 | Microcontroller | ESP32-S3 WROOM-1 N16R8 | Main processor |
@@ -42,10 +35,7 @@ deployment and review.
 | Solenoid Lock | 12V electromagnetic | Door lock |
 | Power Supply | 5V / 3A SMPS | System power |
 
----
-
 ## 3. Pin Assignments
-
 | Peripheral | ESP32-S3 Pin |
 |---|---|
 | MFRC522 SS (SDA) | GPIO 10 |
@@ -61,10 +51,7 @@ deployment and review.
 | DHT22 Data | GPIO 4 |
 | ACS712 Analog | GPIO 14 |
 
----
-
 ## 4. Required Libraries
-
 | Library | Version |
 |---|---|
 | MFRC522 | 1.4.10 |
@@ -74,10 +61,7 @@ deployment and review.
 
 Built-in (no install): WiFi, SPIFFS, SPI, Wire, time.
 
----
-
 ## 5. Setup
-
 ### Install arduino-cli
 ```bash
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
@@ -141,7 +125,6 @@ To authorize a new card: read its UID from the serial monitor, add a
 row, re-upload the firmware.
 
 ## 9. Serial Debug Output
-
 The firmware logs to the serial console at **115200 baud**. Example output:
 
 ```text
@@ -159,7 +142,6 @@ The firmware logs to the serial console at **115200 baud**. Example output:
 ```
 
 ## 10. Firmware Modes
-
 The firmware operates in one of two high-level modes:
 
 ### Configuration Mode
@@ -191,7 +173,6 @@ Entered when valid credentials are found in SPIFFS.
 ```
 
 ## 11. Known Behaviors
-
 | Behavior | Description |
 |---|---|
 | **RFID watchdog** | MFRC522 is reinitialized every 10 seconds to recover from SPI communication glitches |

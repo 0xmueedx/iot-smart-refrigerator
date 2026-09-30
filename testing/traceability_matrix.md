@@ -4,10 +4,7 @@ This matrix maps every requirement to the test case(s) that verify it.
 It ensures complete test coverage and provides audit-ready evidence that 
 each requirement has been validated.
 
----
-
 ## 1. Functional Requirements → Test Cases
-
 | Req ID | Requirement Summary | Test Cases | Status |
 |---|---|---|---|
 | FR-001 | Cooling system adaptation | Verified by physical inspection + IT-02 | ✅ Covered |
@@ -25,10 +22,7 @@ each requirement has been validated.
 | FR-013 | Manual unlock via dashboard | IT-08 | ✅ Covered |
 | FR-014 | NTP time display | IT-02 | ✅ Covered |
 
----
-
 ## 2. Non-Functional Requirements → Test Cases
-
 | Req ID | Requirement Summary | Test Cases | Status |
 |---|---|---|---|
 | NFR-001 | RFID unlock latency ≤ 600 ms | PERF-01 | ✅ Covered |
@@ -56,10 +50,7 @@ each requirement has been validated.
 | NFR-023 | Portable to other cooling units | Design verification | ✅ Covered |
 | NFR-024 | Dashboard on any modern browser | IT-07 (Chrome, Safari, Samsung) | ✅ Covered |
 
----
-
 ## 3. Test Case → Requirement Reverse Mapping
-
 | Test ID | Requirements Verified |
 |---|---|
 | UT-01 | FR-002, FR-003, NFR-006 |
@@ -87,10 +78,7 @@ each requirement has been validated.
 | REG-03 | FR-012 |
 | STAB-01 | NFR-008, NFR-009 |
 
----
-
 ## 4. Coverage Summary
-
 | Category | Total Requirements | Fully Covered | Partial | Not Covered |
 |---|---|---|---|---|
 | Functional (FR) | 14 | 14 | 0 | 0 |
@@ -99,10 +87,7 @@ each requirement has been validated.
 
 **Coverage: 100%**
 
----
-
 ## 5. Coverage Gaps & Notes
-
 - **FR-001** (cooling system adaptation) is verified by physical 
   inspection rather than a formal test case, since it is a mechanical 
   adaptation rather than a software behavior.
@@ -114,6 +99,3 @@ each requirement has been validated.
 No requirement is left unverified. Where runtime testing is not 
 applicable, alternative verification methods (inspection, review) are 
 documented.
-
----
-

@@ -5,10 +5,7 @@
 **Resolved:** 5  
 **Open:** 0
 
----
-
 ## Bug Severity & Priority Legend
-
 | Severity | Meaning |
 |---|---|
 | Critical | System unusable; blocks core functionality |
@@ -22,10 +19,7 @@
 | Medium | Should fix in current cycle |
 | Low | Can defer to next version |
 
----
-
 ## BUG-001: Solenoid Lock Misalignment After Thermal Cycling
-
 | Field | Value |
 |---|---|
 | **Bug ID** | BUG-001 |
@@ -71,10 +65,7 @@ strike hole to guide the bolt into position even with minor misalignment.
 Re-tested 200 unlock cycles after fix; all 200 successful. Re-tested 
 after 12-hour continuous run; alignment remained within tolerance.
 
----
-
 ## BUG-002: DHT22 Returns NaN During Heavy Wi-Fi Activity
-
 | Field | Value |
 |---|---|
 | **Bug ID** | BUG-002 |
@@ -127,7 +118,6 @@ concurrent Wi-Fi. The mitigation ensures user-invisible recovery.
 ---
 
 ## BUG-003: ACS712 Reads Apparent Power, Not True Power
-
 | Field | Value |
 |---|---|
 | **Bug ID** | BUG-003 |
@@ -178,10 +168,7 @@ the sensor works correctly for non-inductive loads.
 Replace with HLW8032 or ATM90E26 energy metering IC, which measures 
 both voltage and current and computes true power directly.
 
----
-
 ## BUG-004: MFRC522 Anti-Collision Timeout
-
 | Field | Value |
 |---|---|
 | **Bug ID** | BUG-004 |
@@ -229,10 +216,7 @@ This is documented MFRC522 behavior and acceptable for a domestic
 appliance. A commercial setting with high card traffic might need 
 a more robust reader.
 
----
-
 ## BUG-005: Compressor Start Relay Loose (Hardware Fault Detected via Current Monitoring)
-
 | Field | Value |
 |---|---|
 | **Bug ID** | BUG-005 |
@@ -281,10 +265,7 @@ This bug demonstrates the practical diagnostic value of the current
 monitoring feature. Without ACS712 data, this hardware fault would 
 likely have progressed to compressor failure before being noticed.
 
----
-
 ## Summary
-
 | Bug ID | Title | Severity | Status |
 |---|---|---|---|
 | BUG-001 | Solenoid lock misalignment | Medium | ✅ Closed |
@@ -305,5 +286,3 @@ likely have progressed to compressor failure before being noticed.
 
 Every bug has a documented root cause, fix, and verification method — 
 a complete QA cycle from discovery to closure.
-
----

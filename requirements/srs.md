@@ -1,17 +1,12 @@
 # Software Requirements Specification
 
----
-
 ## 1. Introduction
-
 ### 1.1 Purpose
-
 This Software Requirements Specification (SRS) defines the functional and non-functional requirements for the IoT-Integrated Intelligent Refrigerator System — a retrofitted water dispenser augmented with RFID-based access control, environmental monitoring, door-ajar alerting, energy metering, and a local web dashboard.
 
 This document serves as the authoritative reference for what the system shall do and how well it shall perform it. It is intended for developers, testers, and reviewers involved in the project.
 
 ### 1.2 Scope
-
 The system encompasses the full development lifecycle:
 
 - Mechanical adaptation of a salvaged water dispenser into a refrigerated locker
@@ -21,7 +16,6 @@ The system encompasses the full development lifecycle:
 - Unit, integration, and performance testing
 
 **Out of scope:**
-
 - Cloud-based remote access beyond the local network
 - Dynamic RFID card enrollment through a user interface
 - Mobile application development
@@ -29,7 +23,6 @@ The system encompasses the full development lifecycle:
 - Firmware control of the compressor (mechanical thermostat retained)
 
 ### 1.3 Definitions & Acronyms
-
 | Term | Meaning |
 |---|---|
 | SRS | Software Requirements Specification |
@@ -50,7 +43,6 @@ The system encompasses the full development lifecycle:
 | NTP | Network Time Protocol |
 
 ### 1.4 References
-
 - IEEE Std 830-1998 — Recommended Practice for Software Requirements Specifications
 - DHT22 Datasheet (Aosong AM2302)
 - MFRC522 Datasheet (NXP)
@@ -58,21 +50,16 @@ The system encompasses the full development lifecycle:
 - ESP32-S3 Technical Reference Manual (Espressif)
 
 ### 1.5 Document Overview
-
 Section 2 describes the product, its users, and its operating environment. Section 3 specifies the functional and non-functional requirements in detail. Section 4 covers external interface requirements.
-
----
 
 ## 2. Overall Description
 
 ### 2.1 Product Perspective
-
 The IoT-Integrated Intelligent Refrigerator System is a standalone, retrofittable IoT appliance. It augments a conventional vapor-compression cooling unit with intelligence: electronic access control, continuous environmental monitoring, automated alerting, and remote visibility through a local web dashboard.
 
 The system is designed as a single-controller architecture — all sensing, actuation, web serving, and display functions run on one ESP32-S3 microcontroller, eliminating the need for a secondary processor.
 
 ### 2.2 Product Functions
-
 1. **RFID access control** — Only authorized cards unlock the door
 2. **Temperature & humidity monitoring** — Continuous sensing via DHT22
 3. **Door-ajar detection** — IR sensor with escalated alert
@@ -82,7 +69,6 @@ The system is designed as a single-controller architecture — all sensing, actu
 7. **On-device OLED display** — Local status at a glance
 
 ### 2.3 User Classes & Characteristics
-
 | User | Description | Technical Skill |
 |---|---|---|
 | Owner | Primary user; scans RFID card, views dashboard | Non-technical |
@@ -90,15 +76,13 @@ The system is designed as a single-controller architecture — all sensing, actu
 | Technician | Reviews current data, diagnoses compressor issues | Technical |
 
 ### 2.4 Operating Environment
-
-- Indoor use, ambient temperature 15–35°C
+n- Indoor use, ambient temperature 15–35°C
 - 220V AC mains supply (Pakistan Standard)
 - Local Wi-Fi network (2.4 GHz, 802.11 b/g/n)
 - Modern web browser (Chrome, Safari, Samsung Internet) for dashboard
 - MIFARE Classic 13.56 MHz RFID cards
 
 ### 2.5 Design Constraints
-
 - Single ESP32-S3 microcontroller — no secondary processor
 - Total electronics cost ≤ USD 50 (excluding donor appliance)
 - Dashboard accessible only on local network (no cloud dependency)
@@ -107,13 +91,10 @@ The system is designed as a single-controller architecture — all sensing, actu
 - No battery backup — system relies on mains power
 
 ### 2.6 Assumptions & Dependencies
-
 - Donor water dispenser available in working condition
 - Stable 220V AC supply
 - Wi-Fi 2.4 GHz network available for dashboard access
 - Users possess authorized MIFARE Classic RFID cards
-
----
 
 ## 3. Specific Requirements
 
@@ -128,13 +109,11 @@ See `non_functional_reqs.md` for the complete list (NFR-001 through NFR-022).
 ### 3.3 External Interface Requirements
 
 **User Interfaces:**
-
 - **OLED display (SSD1306, 128×64):** Displays time, temperature, humidity, access status, and door-ajar warnings
 - **Web dashboard:** Renders live temperature, humidity, door state, power draw, and manual unlock button
 - **Buzzer (KY-006):** Startup melody, access-granted tone, access-denied tone, door-ajar alert pattern
 
 **Hardware Interfaces:**
-
 | Peripheral | Interface | ESP32-S3 Pin |
 |---|---|---|
 | MFRC522 SS | SPI | GPIO 10 |
@@ -151,7 +130,6 @@ See `non_functional_reqs.md` for the complete list (NFR-001 through NFR-022).
 | ACS712 | Analog (ADC1_CH4) | GPIO 14 |
 
 **Software Interfaces:**
-
 - Arduino framework (C++)
 - MFRC522 library v1.4.10
 - Adafruit GFX v1.11.9 + SSD1306 v2.5.7
@@ -162,10 +140,7 @@ See `non_functional_reqs.md` for the complete list (NFR-001 through NFR-022).
 - NTP for time synchronization
 
 **Communication Interfaces:**
-
 - Wi-Fi 802.11 b/g/n (2.4 GHz)
 - SPI @ 1 MHz (RFID reader)
 - I²C (OLED display)
 - HTTP (dashboard)
-
----

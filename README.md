@@ -1,6 +1,6 @@
 # IoT-Integrated Intelligent Refrigerator System
 
-Final Year Project — BSc Computer Engineering, BZU Multan
+Final Year Project — B.Sc. Computer Engineering, BZU Multan
 
 ## What It Does
 A retrofitted water dispenser turned into a smart refrigerator with:
@@ -25,10 +25,3 @@ A retrofitted water dispenser turned into a smart refrigerator with:
 | Traceability Matrix | [Matrix](testing/traceability_matrix.md) |
 | Bug Reports | [Bugs](testing/bug_reports.md) |
 | Lessons Learned | [Reflections](reflections/lessons_learned.md) |
-
-## Healthcare Relevance
-Cold-chain monitoring principles apply directly to vaccine storage, 
-insulin refrigeration, and hospital pharmacy temperature control.
-
-## Tech Stack
-ESP32-S3 · Arduino C++ · MFRC522 · DHT22 · ACS712 · SSD1306 OLED · SPIFFS

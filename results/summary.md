@@ -3,10 +3,7 @@
 **Testing Period:** 4 days (unit, integration, performance, stability)  
 **Environment:** Indoor, 23–27°C ambient, 220V AC mains
 
----
-
 ## 1. Executive Summary
-
 The IoT-Integrated Intelligent Refrigerator System was built, integrated, 
 and tested against all defined functional and non-functional requirements. 
 All 24 formal test cases passed. Key quantitative results:
@@ -24,8 +21,6 @@ All 24 formal test cases passed. Key quantitative results:
 | Lock endurance | 200 cycles | **200/200 passed** |
 
 The system ran for 24 hours without crashes, freezes, or Wi-Fi dropouts.
-
----
 
 ## 2. RFID Access Control Results
 
@@ -53,7 +48,6 @@ not need to physically actuate.
 **Result:** ✅ Meets NFR-001 (≤ 600 ms).
 
 ### 2.2 Access Decision Accuracy
-
 100 card presentations: 50 authorized, 50 unauthorized.
 
 | Card Type | Presentations | Correct Decision | False Accept | False Reject |
@@ -69,7 +63,6 @@ normal household electromagnetic environment. Edge cases (wet cards,
 extreme angles, strong EMI) were not exhaustively tested.
 
 ### 2.3 Lock Endurance
-
 200 consecutive unlock cycles (3 s energization, 10 s interval).
 
 - Success rate: **200/200 (100%)**
@@ -82,9 +75,7 @@ extreme angles, strong EMI) were not exhaustively tested.
 ---
 
 ## 3. Environmental Monitoring Results
-
 ### 3.1 Sensor Accuracy
-
 The DHT22 was compared against a calibrated digital thermometer-hygrometer 
 placed adjacent, across 5 temperature set points. At each point, the 
 system stabilized for 30 minutes before 10 readings were averaged.
@@ -106,7 +97,6 @@ this accuracy is more than sufficient.
 **Result:** ✅ Meets NFR-011 (±0.5°C) and NFR-012 (±5% RH).
 
 ### 3.2 Temperature Stability Over 24 Hours
-
 Internal temperature was logged every 5 seconds for 24 hours, then 
 averaged into 1-minute bins. Ambient room temperature varied between 
 23°C and 27°C over the day-night cycle.
@@ -126,7 +116,6 @@ compressor is operating comfortably within its design envelope for
 a 10-liter compartment in a 25°C ambient.
 
 ### 3.3 Sensor Read Reliability
-
 Over 24 hours, the DHT22 was polled 17,280 times (every 5 seconds).
 
 | Metric | Value |
@@ -146,7 +135,6 @@ valid reading, so the OLED and dashboard never showed gaps.
 ---
 
 ## 4. Door-Ajar Alert Results
-
 ### 4.1 Timing Accuracy
 
 Tested over 10 trials with the default 30-second threshold.
@@ -168,7 +156,6 @@ pattern is highly attention-grabbing.
 **Result:** ✅ Meets NFR-004 (alert trigger ≤ 200 ms after threshold).
 
 ### 4.2 Response to Door Closure
-
 In all 10 trials, beeping and blinking stopped within one beep cycle 
 (< 400 ms) of the door closing. The IR sensor responds essentially 
 instantly (signal goes LOW when door is within 5 mm of frame); the 
@@ -186,9 +173,7 @@ behavior matches user expectations — no false alarms during normal use.
 ---
 
 ## 5. Web Dashboard Results
-
 ### 5.1 Data Endpoint Latency
-
 Measured over 500 consecutive requests to `/data`.
 
 | Metric | Value |
@@ -205,7 +190,6 @@ contending for the I²C bus.
 **Result:** ✅ Meets NFR-003 (≤ 100 ms).
 
 ### 5.2 Dashboard Load Time
-
 Tested from three clients:
 
 | Client | Browser | Load Time |
@@ -220,7 +204,6 @@ fetches every 2 seconds transfer ~180 bytes each.
 **Result:** ✅ Meets NFR-005 (portal load ≤ 3 s).
 
 ### 5.3 Manual Unlock
-
 Tested 20 times via dashboard "Unlock" button:
 - Lock opened within ~500 ms in all 20 trials
 - Lock closed after exactly 3 seconds
@@ -232,9 +215,7 @@ Tested 20 times via dashboard "Unlock" button:
 ---
 
 ## 6. Energy Monitoring Results
-
 ### 6.1 Current Sensor Calibration
-
 **Resistive load test** (60 W incandescent bulb as reference):
 
 | Parameter | Reference | ACS712 | Error |
@@ -260,7 +241,6 @@ indicative power (apparent), not true power.
 a known limitation for inductive loads (see BUG-003).
 
 ### 6.2 Compressor Current Profile
-
 Over three full compressor cycles, the ACS712 captured the following 
 profile:
 
@@ -280,10 +260,7 @@ current monitoring.
 **Result:** ✅ Successfully captures compressor behavior and detects 
 anomalies.
 
----
-
 ## 7. System Stability Results
-
 ### 7.1 24-Hour Continuous Run
 
 | Metric | Result |
@@ -307,10 +284,7 @@ as BUG-004).
 
 **Result:** ✅ Meets NFR-008 (24-hour operation) and NFR-009 (Wi-Fi stability).
 
----
-
 ## 8. Results Summary Table
-
 | Requirement | Target | Achieved | Status |
 |---|---|---|---|
 | NFR-001 | RFID latency ≤ 600 ms | 478 ms | ✅ |
@@ -339,7 +313,6 @@ as BUG-004).
 ---
 
 ## 9. Discussion
-
 ### Strengths
 
 1. **RFID access control** achieved 100% accuracy with sub-500 ms 
@@ -357,7 +330,6 @@ as BUG-004).
    detecting a loose start relay before it caused compressor failure.
 
 ### Limitations
-
 1. **ACS712 accuracy for inductive loads** (compressor) is limited to 
    ~±8% due to phase-angle effects. The dashboard reports indicative 
    power, not utility-grade measurement.
@@ -372,7 +344,6 @@ as BUG-004).
    the system monitors but does not override it.
 
 ### Real-World Relevance
-
 The system demonstrates that a **retrofittable, low-cost intelligent 
 refrigeration solution** is feasible. Total electronics cost was 
 approximately **USD 45** (excluding the donor appliance) — an order 
@@ -382,5 +353,3 @@ The cold-chain monitoring principles (continuous temperature logging,
 door-ajar detection, access control, remote visibility) are directly 
 applicable to **healthcare scenarios** such as vaccine storage, 
 insulin refrigeration, and hospital pharmacy temperature control.
-
----

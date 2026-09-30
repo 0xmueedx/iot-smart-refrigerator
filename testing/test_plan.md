@@ -2,16 +2,10 @@
 
 **Environment:** Prototype unit, indoor, ~25°C ambient, 220V AC mains
 
----
-
 ## 1. Introduction
-
 This Test Plan defines the strategy, scope, approach, and deliverables for testing the IoT-Integrated Intelligent Refrigerator System. It covers unit testing of individual subsystems, integration testing of the complete operational flow, performance measurement of key operations, and a 24-hour long-duration stability test.
 
----
-
 ## 2. Test Objectives
-
 1. Verify each hardware subsystem functions as specified
 2. Verify the integrated system behaves correctly under realistic usage
 3. Measure performance against defined targets
@@ -19,10 +13,7 @@ This Test Plan defines the strategy, scope, approach, and deliverables for testi
 5. Validate the system against approved functional requirements
 6. Identify and document any defects found during testing
 
----
-
 ## 3. Scope
-
 ### In scope:
 - RFID access control (card reading, decision logic, lock actuation)
 - Environmental monitoring (temperature, humidity)
@@ -40,10 +31,7 @@ This Test Plan defines the strategy, scope, approach, and deliverables for testi
 - Mobile app testing (no mobile app in this version)
 - Cloud connectivity (not implemented)
 
----
-
 ## 4. Test Approach
-
 | Test Level | Description | Coverage |
 |---|---|---|
 | Unit Testing | Each subsystem tested in isolation | Hardware, sensors, actuators |
@@ -53,10 +41,7 @@ This Test Plan defines the strategy, scope, approach, and deliverables for testi
 | Stability Testing | 24-hour continuous run | Overall system reliability |
 | UAT | User-perspective validation | Final acceptance |
 
----
-
 ## 5. Test Environment
-
 | Component | Specification |
 |---|---|
 | DUT | Assembled prototype (water dispenser with electronics) |
@@ -67,27 +52,20 @@ This Test Plan defines the strategy, scope, approach, and deliverables for testi
 | Reference Instruments | Calibrated digital thermometer-hygrometer, plug-in power meter |
 | Clients | Windows laptop (Chrome), Android phone, iPhone (Safari) |
 
----
-
 ## 6. Entry Criteria
-
 - Prototype fully assembled and powered
 - Firmware compiled and uploaded successfully
 - Test environment set up with reference instruments
 - Test cases documented and reviewed
 
 ## 7. Exit Criteria
-
 - All High-priority test cases executed
 - ≥ 95% pass rate on High-priority cases
 - All critical and high-severity bugs resolved or documented
 - 24-hour stability test passed
 - UAT sign-off completed
 
----
-
 ## 8. Roles & Responsibilities
-
 | Role | Person | Responsibility |
 |---|---|---|
 | Test Lead | Saad Sohail Ansari | Test plan, execution, reporting |
@@ -95,10 +73,7 @@ This Test Plan defines the strategy, scope, approach, and deliverables for testi
 | Test Engineer | Abdul Mueed Malik | Performance measurements, bug documentation |
 | Supervisor | Dr. Yasir Aziz | Review, UAT approval |
 
----
-
 ## 9. Test Deliverables
-
 1. Test Plan (this document)
 2. Test Cases (`test_cases.md`)
 3. Traceability Matrix (`traceability_matrix.md`)
@@ -107,10 +82,7 @@ This Test Plan defines the strategy, scope, approach, and deliverables for testi
 6. Performance Results (see `04_Results/`)
 7. UAT Sign-off (see §11 below)
 
----
-
 ## 10. Test Execution Log
-
 | Test ID | Description | Date | Result |
 |---|---|---|---|
 | UT-01 | RFID authorized card read | Day 1 | ✅ Pass |
@@ -131,15 +103,11 @@ This Test Plan defines the strategy, scope, approach, and deliverables for testi
 | PERF-03 | Alert timing (n=10) | Day 3 | ✅ Pass |
 | STAB-01 | 24-hour continuous run | Day 4 | ✅ Pass |
 
----
-
 ## 11. User Acceptance Testing (UAT)
-
 ### UAT Objectives
 Confirm the system meets real-world user needs and is acceptable for deployment.
 
 ### UAT Scenarios
-
 | UAT ID | Scenario | Acceptance Criteria | Result |
 |---|---|---|---|
 | UAT-01 | First-time Wi-Fi setup | Non-technical user completes setup in < 3 minutes | ✅ Pass |
@@ -150,17 +118,13 @@ Confirm the system meets real-world user needs and is acceptable for deployment.
 | UAT-06 | Recover forgotten card | Manual unlock via dashboard works | ✅ Pass |
 
 ### UAT Sign-off
-
 | Role | Name | Signature | Date |
 |---|---|---|---|
 | User Representative | Saad Sohail Ansari | ✅ Approved | 2026-04-07 |
 | Test Lead | Fatima-tu-Zahra Qayyum | ✅ Approved | 2026-04-07 |
 | Supervisor | Dr. Yasir Aziz | ✅ Approved | 2026-04-10 |
 
----
-
 ## 12. Risks & Mitigations
-
 | Risk | Impact | Mitigation |
 |---|---|---|
 | Mains voltage fluctuation damages electronics | High | Certified SMPS with protection; tested at 220V ±5% |
@@ -169,10 +133,7 @@ Confirm the system meets real-world user needs and is acceptable for deployment.
 | Solenoid misalignment due to thermal cycling | Medium | Steel guide plate installed; 200-cycle verification |
 | Compressor startup inrush misread | Low | Zero-current offset calibrated at startup |
 
----
-
 ## 13. Test Schedule
-
 | Phase | Duration | Completed |
 |---|---|---|
 | Unit testing | 1 day | ✅ |
@@ -181,6 +142,3 @@ Confirm the system meets real-world user needs and is acceptable for deployment.
 | 24-hour stability test | 1 day | ✅ |
 | UAT | 0.5 day | ✅ |
 | Documentation | 0.5 day | ✅ |
-
----
-

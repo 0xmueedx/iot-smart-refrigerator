@@ -1,9 +1,6 @@
 # Test Cases
 
----
-
 ## Legend
-
 | Symbol | Meaning |
 |---|---|
 | ✅ | Pass |
@@ -18,10 +15,7 @@
 | Medium | Function degraded |
 | Low | Cosmetic or minor |
 
----
-
 ## 1. Unit Test Cases
-
 ### UT-01: RFID Reader — Authorized Card
 
 | Field | Value |
@@ -37,7 +31,6 @@
 | Severity | Critical |
 
 ### UT-02: RFID Reader — Unauthorized Card
-
 | Field | Value |
 |---|---|
 | Test ID | UT-02 |
@@ -51,7 +44,6 @@
 | Severity | Critical |
 
 ### UT-03: Solenoid Lock Actuation
-
 | Field | Value |
 |---|---|
 | Test ID | UT-03 |
@@ -65,7 +57,6 @@
 | Severity | High |
 
 ### UT-04: DHT22 Accuracy
-
 | Field | Value |
 |---|---|
 | Test ID | UT-04 |
@@ -79,7 +70,6 @@
 | Severity | High |
 
 ### UT-05: IR Door Sensor
-
 | Field | Value |
 |---|---|
 | Test ID | UT-05 |
@@ -92,12 +82,8 @@
 | Status | ✅ Pass |
 | Severity | High |
 
----
-
 ## 2. Integration Test Cases
-
 ### IT-01: First Boot + Wi-Fi Configuration
-
 | Field | Value |
 |---|---|
 | Test ID | IT-01 |
@@ -110,7 +96,6 @@
 | Severity | Critical |
 
 ### IT-02: Normal Operation Display
-
 | Field | Value |
 |---|---|
 | Test ID | IT-02 |
@@ -123,7 +108,6 @@
 | Severity | High |
 
 ### IT-03: Authorized RFID Scan
-
 | Field | Value |
 |---|---|
 | Test ID | IT-03 |
@@ -136,7 +120,6 @@
 | Severity | Critical |
 
 ### IT-04: Unauthorized RFID Scan
-
 | Field | Value |
 |---|---|
 | Test ID | IT-04 |
@@ -149,7 +132,6 @@
 | Severity | Critical |
 
 ### IT-05: Door Open < 30 Seconds
-
 | Field | Value |
 |---|---|
 | Test ID | IT-05 |
@@ -162,7 +144,6 @@
 | Severity | High |
 
 ### IT-06: Door Open > 30 Seconds
-
 | Field | Value |
 |---|---|
 | Test ID | IT-06 |
@@ -175,7 +156,6 @@
 | Severity | High |
 
 ### IT-07: Web Dashboard Load
-
 | Field | Value |
 |---|---|
 | Test ID | IT-07 |
@@ -188,7 +168,6 @@
 | Severity | High |
 
 ### IT-08: Manual Unlock from Dashboard
-
 | Field | Value |
 |---|---|
 | Test ID | IT-08 |
@@ -201,7 +180,6 @@
 | Severity | Medium |
 
 ### IT-09: Wi-Fi Reset from Dashboard
-
 | Field | Value |
 |---|---|
 | Test ID | IT-09 |
@@ -214,7 +192,6 @@
 | Severity | Medium |
 
 ### IT-10: RFID Watchdog Recovery
-
 | Field | Value |
 |---|---|
 | Test ID | IT-10 |
@@ -226,12 +203,8 @@
 | Status | ✅ Pass |
 | Severity | Medium |
 
----
-
 ## 3. Performance Test Cases
-
 ### PERF-01: RFID Read-to-Unlock Latency
-
 | Field | Value |
 |---|---|
 | Test ID | PERF-01 |
@@ -244,7 +217,6 @@
 | Severity | High |
 
 ### PERF-02: Dashboard Endpoint Latency
-
 | Field | Value |
 |---|---|
 | Test ID | PERF-02 |
@@ -257,7 +229,6 @@
 | Severity | Medium |
 
 ### PERF-03: Door-Ajar Alert Timing
-
 | Field | Value |
 |---|---|
 | Test ID | PERF-03 |
@@ -270,7 +241,6 @@
 | Severity | High |
 
 ### PERF-04: DHT22 Read Success Rate
-
 | Field | Value |
 |---|---|
 | Test ID | PERF-04 |
@@ -283,7 +253,6 @@
 | Severity | High |
 
 ### PERF-05: Solenoid Endurance
-
 | Field | Value |
 |---|---|
 | Test ID | PERF-05 |
@@ -295,12 +264,8 @@
 | Status | ✅ Pass |
 | Severity | Medium |
 
----
-
 ## 4. Regression Test Cases
-
 ### REG-01: RFID After Dashboard Fix
-
 | Field | Value |
 |---|---|
 | Test ID | REG-01 |
@@ -313,7 +278,6 @@
 | Severity | High |
 
 ### REG-02: Door Alert After OLED Fix
-
 | Field | Value |
 |---|---|
 | Test ID | REG-02 |
@@ -326,7 +290,6 @@
 | Severity | High |
 
 ### REG-03: Wi-Fi Reconnect After Credential Fix
-
 | Field | Value |
 |---|---|
 | Test ID | REG-03 |
@@ -338,12 +301,8 @@
 | Status | ✅ Pass |
 | Severity | Medium |
 
----
-
 ## 5. Stability Test
-
 ### STAB-01: 24-Hour Continuous Run
-
 | Field | Value |
 |---|---|
 | Test ID | STAB-01 |
@@ -355,10 +314,7 @@
 | Status | ✅ Pass |
 | Severity | Critical |
 
----
-
 ## Test Summary
-
 | Category | Total | Pass | Fail |
 |---|---|---|---|
 | Unit | 5 | 5 | 0 |
@@ -372,6 +328,3 @@
 
 *Note: 8 additional exploratory tests were executed but not documented as 
 formal cases. All produced expected results.*
-
----
-
